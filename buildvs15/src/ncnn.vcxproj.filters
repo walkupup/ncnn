@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\cpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\mat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\mat_pixel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\net.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\opencv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\absval.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\argmax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\batchnorm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\bias.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\bnll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\concat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\convolution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\x86\convolution_x86.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\crop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\deconvolution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\dropout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\eltwise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\elu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\exp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\flatten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\innerproduct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\lrn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\mvn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\pooling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\power.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\prelu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\proposal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\relu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\reshape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\scale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\sigmoid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\slice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\softmax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\split.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\spp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\tanh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\threshold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\tile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\binaryop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\unaryop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\convolutiondepthwise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\padding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\squeeze.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\expanddims.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\normalize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\permute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\priorbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\concatv2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\softmaxv2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\proj\dnn\ncnn\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8769BC06-7AAF-30E3-9677-2C280D62458C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

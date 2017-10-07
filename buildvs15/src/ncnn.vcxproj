@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7E1E324D-EF5B-3591-896B-164062455D8E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ncnn</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ncnn.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ncnn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ncnn.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ncnn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ncnn.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ncnn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ncnn.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ncnn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\src;F:\proj\dnn\ncnn\buildvs15\src;F:\proj\dnn\ncnn\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\proj\dnn\ncnn\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/proj/dnn/ncnn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/proj/dnn/ncnn/src/CMakeLists.txt;F:\proj\dnn\ncnn\src\CMakeLists.txt;F:\proj\dnn\ncnn\src\platform.h.in;F:\proj\dnn\ncnn\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/proj/dnn/ncnn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/proj/dnn/ncnn/src/CMakeLists.txt;F:\proj\dnn\ncnn\src\CMakeLists.txt;F:\proj\dnn\ncnn\src\platform.h.in;F:\proj\dnn\ncnn\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\proj\dnn\ncnn\buildvs15\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/proj/dnn/ncnn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/proj/dnn/ncnn/src/CMakeLists.txt;F:\proj\dnn\ncnn\src\CMakeLists.txt;F:\proj\dnn\ncnn\src\platform.h.in;F:\proj\dnn\ncnn\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/proj/dnn/ncnn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/proj/dnn/ncnn/src/CMakeLists.txt;F:\proj\dnn\ncnn\src\CMakeLists.txt;F:\proj\dnn\ncnn\src\platform.h.in;F:\proj\dnn\ncnn\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\proj\dnn\ncnn\src\blob.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\cpu.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\mat.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\mat_pixel.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\net.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\opencv.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\absval.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\argmax.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\batchnorm.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\bias.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\bnll.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\concat.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\convolution.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\x86\convolution_x86.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\crop.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\deconvolution.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\dropout.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\eltwise.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\elu.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\exp.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\flatten.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\innerproduct.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\input.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\log.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\lrn.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\mvn.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\pooling.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\power.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\prelu.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\proposal.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\relu.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\reshape.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\scale.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\sigmoid.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\slice.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\softmax.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\split.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\spp.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\tanh.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\threshold.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\tile.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\binaryop.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\unaryop.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\convolutiondepthwise.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\padding.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\squeeze.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\expanddims.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\normalize.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\permute.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\priorbox.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\concatv2.cpp" />
+    <ClCompile Include="F:\proj\dnn\ncnn\src\layer\softmaxv2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\ZERO_CHECK.vcxproj">
+      <Project>{0C23A2FB-6760-35D1-BDCD-AA4B3B59DE1C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

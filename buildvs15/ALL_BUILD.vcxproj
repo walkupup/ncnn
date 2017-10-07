@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9ADB5919-DA60-313B-B8FC-3C3C57C5D841}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\proj\dnn\ncnn\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/proj/dnn/ncnn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/proj/dnn/ncnn/CMakeLists.txt;F:\proj\dnn\ncnn\CMakeLists.txt;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCCompiler.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCXXCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeRCCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeRCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;F:\proj\dnn\ncnn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/proj/dnn/ncnn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/proj/dnn/ncnn/CMakeLists.txt;F:\proj\dnn\ncnn\CMakeLists.txt;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCCompiler.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCXXCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeRCCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeRCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;F:\proj\dnn\ncnn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\proj\dnn\ncnn\buildvs15\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/proj/dnn/ncnn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/proj/dnn/ncnn/CMakeLists.txt;F:\proj\dnn\ncnn\CMakeLists.txt;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCCompiler.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCXXCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeRCCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeRCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;F:\proj\dnn\ncnn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/proj/dnn/ncnn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/proj/dnn/ncnn/CMakeLists.txt;F:\proj\dnn\ncnn\CMakeLists.txt;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCCompiler.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeCXXCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;F:\proj\dnn\ncnn\buildvs15\CMakeFiles\3.10.0-rc1\CMakeRCCompiler.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeRCInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;F:\proj\dnn\ncnn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\ZERO_CHECK.vcxproj">
+      <Project>{0C23A2FB-6760-35D1-BDCD-AA4B3B59DE1C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\tools\caffe2ncnn.vcxproj">
+      <Project>{A80252D8-60AE-3E5D-A15D-FAFD370B2CF6}</Project>
+      <Name>caffe2ncnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\src\ncnn.vcxproj">
+      <Project>{7E1E324D-EF5B-3591-896B-164062455D8E}</Project>
+      <Name>ncnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\tools\ncnn2mem.vcxproj">
+      <Project>{5DB12CB1-06CC-324F-8AB4-1C89C371F9FA}</Project>
+      <Name>ncnn2mem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
