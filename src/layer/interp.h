@@ -12,32 +12,32 @@
 // CONDITIONS OF ANY KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations under the License.
 
-#ifndef LAYER_SOFTMAXV2_H
-#define LAYER_SOFTMAXV2_H
+#ifndef LAYER_INTERP_H
+#define LAYER_INTERP_H
 
 #include "layer.h"
 
 namespace ncnn {
 
-class SoftmaxV2 : public Layer
+class Interp : public Layer
 {
 public:
-    SoftmaxV2();
+    Interp();
+    virtual ~Interp();
 
-#if NCNN_STDIO
-#if NCNN_STRING
-    virtual int load_param(FILE* paramfp);
-#endif // NCNN_STRING
-    virtual int load_param_bin(FILE* paramfp);
-#endif // NCNN_STDIO
-    virtual int load_param(const unsigned char*& mem);
+    virtual int load_param(const ParamDict& pd);
 
-    virtual int forward(const Mat& bottom_blob, Mat& top_blob) const;
+    virtual int forward(const Mat &bottom_blob, Mat &top_blob) const;
 
 public:
-    int axis;
+    // param
+    float width_scale;
+    float height_scale;
+    int output_width;
+    int output_height;
+    int resize_type;//1:near 2: bilinear
 };
 
 } // namespace ncnn
 
-#endif // LAYER_SOFTMAXV2_H
+#endif // LAYER_INTERP_H

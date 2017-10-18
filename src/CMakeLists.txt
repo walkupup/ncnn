@@ -15,6 +15,7 @@ set(ncnn_SRCS
     mat_pixel.cpp
     net.cpp
     opencv.cpp
+    paramdict.cpp
 )
 
 macro(ncnn_add_layer class)
@@ -109,11 +110,11 @@ ncnn_add_layer(MVN)
 ncnn_add_layer(Pooling)
 ncnn_add_layer(Power)
 ncnn_add_layer(PReLU)
-ncnn_add_layer(Proposal OFF)
+ncnn_add_layer(Proposal)
 ncnn_add_layer(Reduction)
 ncnn_add_layer(ReLU)
 ncnn_add_layer(Reshape)
-ncnn_add_layer(ROIPooling OFF)
+ncnn_add_layer(ROIPooling)
 ncnn_add_layer(Scale)
 ncnn_add_layer(Sigmoid)
 ncnn_add_layer(Slice)
@@ -134,9 +135,8 @@ ncnn_add_layer(ExpandDims)
 ncnn_add_layer(Normalize)
 ncnn_add_layer(Permute)
 ncnn_add_layer(PriorBox)
-ncnn_add_layer(ConcatV2)
-ncnn_add_layer(SoftmaxV2)
 ncnn_add_layer(DetectionOutput)
+ncnn_add_layer(Interp)
 
 add_library(ncnn STATIC ${ncnn_SRCS})
 
@@ -149,6 +149,7 @@ install(FILES
     mat.h
     net.h
     opencv.h
+    paramdict.h
     ${CMAKE_CURRENT_BINARY_DIR}/layer_type_enum.h
     ${CMAKE_CURRENT_BINARY_DIR}/platform.h
     DESTINATION include
