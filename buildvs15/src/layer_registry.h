@@ -243,13 +243,13 @@
 #else
 {PriorBox_layer_creator},
 #endif
-#if NCNN_STRING
-{"ConcatV2",ConcatV2_layer_creator},
-#else
-{ConcatV2_layer_creator},
-#endif
-#if NCNN_STRING
-{"SoftmaxV2",SoftmaxV2_layer_creator},
-#else
-{SoftmaxV2_layer_creator},
-#endif
+//#if NCNN_STRING
+//{"ConcatV2",ConcatV2_layer_creator},
+//#else
+//{ConcatV2_layer_creator},
+//#endif
+//#if NCNN_STRING
+//{"SoftmaxV2",SoftmaxV2_layer_creator},
+//#else
+//{SoftmaxV2_layer_creator},
+//#endif
