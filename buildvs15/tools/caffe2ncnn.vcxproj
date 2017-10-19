@@ -372,12 +372,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.cc" />
     <ClInclude Include="F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\ZERO_CHECK.vcxproj">
-      <Project>{0C23A2FB-6760-35D1-BDCD-AA4B3B59DE1C}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -41,5 +41,3 @@ extern Layer* ExpandDims_layer_creator();
 extern Layer* Normalize_layer_creator();
 extern Layer* Permute_layer_creator();
 extern Layer* PriorBox_layer_creator();
-extern Layer* ConcatV2_layer_creator();
-extern Layer* SoftmaxV2_layer_creator();

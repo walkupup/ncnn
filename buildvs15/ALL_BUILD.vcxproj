@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -159,10 +159,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\ZERO_CHECK.vcxproj">
-      <Project>{0C23A2FB-6760-35D1-BDCD-AA4B3B59DE1C}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
     <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\tools\caffe2ncnn.vcxproj">
       <Project>{A80252D8-60AE-3E5D-A15D-FAFD370B2CF6}</Project>
       <Name>caffe2ncnn</Name>
