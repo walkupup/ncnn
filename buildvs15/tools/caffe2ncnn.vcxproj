@@ -56,7 +56,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\tools\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\buildvs15\tools\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">caffe2ncnn.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">caffe2ncnn</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
@@ -68,13 +68,13 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\tools\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\buildvs15\tools\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">caffe2ncnn.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">caffe2ncnn</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\tools\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\buildvs15\tools\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">caffe2ncnn.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">caffe2ncnn</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -101,10 +101,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,8 +117,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/proj/dnn/ncnn/buildvs15/tools/Debug/caffe2ncnn.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/proj/dnn/ncnn/buildvs15/tools/Debug/caffe2ncnn.pdb</ProgramDataBaseFile>
+      <ImportLibrary>../../buildvs15/tools/Debug/caffe2ncnn.lib</ImportLibrary>
+      <ProgramDataBaseFile>../../buildvs15/tools/Debug/caffe2ncnn.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -127,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -144,10 +144,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -160,8 +160,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/proj/dnn/ncnn/buildvs15/tools/Release/caffe2ncnn.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/proj/dnn/ncnn/buildvs15/tools/Release/caffe2ncnn.pdb</ProgramDataBaseFile>
+      <ImportLibrary>../../buildvs15/tools/Release/caffe2ncnn.lib</ImportLibrary>
+      <ProgramDataBaseFile>../../buildvs15/tools/Release/caffe2ncnn.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -170,7 +170,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -188,10 +188,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -204,8 +204,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/proj/dnn/ncnn/buildvs15/tools/MinSizeRel/caffe2ncnn.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/proj/dnn/ncnn/buildvs15/tools/MinSizeRel/caffe2ncnn.pdb</ProgramDataBaseFile>
+      <ImportLibrary>../../buildvs15/tools/MinSizeRel/caffe2ncnn.lib</ImportLibrary>
+      <ProgramDataBaseFile>../../buildvs15/tools/MinSizeRel/caffe2ncnn.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -214,7 +214,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -231,10 +231,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\tools\..\src;..\..\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\..\buildvs15\tools;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -247,8 +247,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/proj/dnn/ncnn/buildvs15/tools/RelWithDebInfo/caffe2ncnn.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/proj/dnn/ncnn/buildvs15/tools/RelWithDebInfo/caffe2ncnn.pdb</ProgramDataBaseFile>
+      <ImportLibrary>../../buildvs15/tools/RelWithDebInfo/caffe2ncnn.lib</ImportLibrary>
+      <ProgramDataBaseFile>../../buildvs15/tools/RelWithDebInfo/caffe2ncnn.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -256,66 +256,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\proj\dnn\ncnn\tools\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="F:\proj\dnn\ncnn\buildvs15\CMakeFiles\ae7943e433fa24fa6e3a3ef121ea2ff1\caffe.pb.cc.rule">
+    <CustomBuild Include="..\..\buildvs15\CMakeFiles\ae7943e433fa24fa6e3a3ef121ea2ff1\caffe.pb.cc.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running C++ protocol buffer compiler on caffe.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=F:/proj/dnn/ncnn/buildvs15/tools -I F:/proj/dnn/ncnn/tools F:/proj/dnn/ncnn/tools/caffe.proto
+C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=../../buildvs15/tools -I ../../tools ../../tools/caffe.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -323,12 +267,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/proj/dnn/ncnn/buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;F:\proj\dnn\ncnn\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.cc;F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../../buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;..\..\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\buildvs15\tools\caffe.pb.cc;..\..\buildvs15\tools\caffe.pb.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running C++ protocol buffer compiler on caffe.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=F:/proj/dnn/ncnn/buildvs15/tools -I F:/proj/dnn/ncnn/tools F:/proj/dnn/ncnn/tools/caffe.proto
+C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=../../buildvs15/tools -I ../../tools ../../tools/caffe.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -336,12 +280,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/proj/dnn/ncnn/buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;F:\proj\dnn\ncnn\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.cc;F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../../buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;..\..\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\buildvs15\tools\caffe.pb.cc;..\..\buildvs15\tools\caffe.pb.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running C++ protocol buffer compiler on caffe.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=F:/proj/dnn/ncnn/buildvs15/tools -I F:/proj/dnn/ncnn/tools F:/proj/dnn/ncnn/tools/caffe.proto
+C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=../../buildvs15/tools -I ../../tools ../../tools/caffe.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -349,12 +293,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/proj/dnn/ncnn/buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;F:\proj\dnn\ncnn\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.cc;F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">../../buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;..\..\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\buildvs15\tools\caffe.pb.cc;..\..\buildvs15\tools\caffe.pb.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running C++ protocol buffer compiler on caffe.proto</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=F:/proj/dnn/ncnn/buildvs15/tools -I F:/proj/dnn/ncnn/tools F:/proj/dnn/ncnn/tools/caffe.proto
+C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe --cpp_out=../../buildvs15/tools -I ../../tools ../../tools/caffe.proto
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -362,15 +306,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/proj/dnn/ncnn/buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;F:\proj\dnn\ncnn\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.cc;F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">../../buildvs15/CMakeFiles/ae7943e433fa24fa6e3a3ef121ea2ff1/caffe.pb.cc.rule;..\..\tools\caffe.proto;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\buildvs15\tools\caffe.pb.cc;..\..\buildvs15\tools\caffe.pb.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="F:\proj\dnn\ncnn\tools\caffe2ncnn.cpp" />
-    <ClCompile Include="F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.cc" />
-    <ClInclude Include="F:\proj\dnn\ncnn\buildvs15\tools\caffe.pb.h" />
+    <ClInclude Include="..\..\buildvs15\tools\caffe.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tools\caffe2ncnn.cpp" />
+    <ClCompile Include="caffe.pb.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

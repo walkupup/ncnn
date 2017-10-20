@@ -24,6 +24,7 @@
     <Platform>x64</Platform>
     <ProjectName>ncnn2mem</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -61,7 +62,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\proj\dnn\ncnn\buildvs15\tools\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ncnn2mem.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ncnn2mem</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -126,8 +127,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\proj\dnn\ncnn\tools\..\src;F:\proj\dnn\ncnn\buildvs15\tools\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;F:\proj\dnn\ncnn\buildvs15\tools;F:\proj\dnn\ncnn\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -Wextra -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\..\src;C:\Users\yl\.caffe\dependencies\libraries_v140_x64_py27_1.1.0\libraries\include;..\tools;..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC -Ofast -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -256,69 +257,13 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\proj\dnn\ncnn\tools\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/proj/dnn/ncnn/tools/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\bin\cmake.exe -HF:/proj/dnn/ncnn -BF:/proj/dnn/ncnn/buildvs15 --check-stamp-file F:/proj/dnn/ncnn/buildvs15/tools/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/proj/dnn/ncnn/tools/CMakeLists.txt;F:\proj\dnn\ncnn\tools\CMakeLists.txt;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindProtobuf.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;G:\soft\develop\cmake\cmake-3.10.0-rc1-win64-x64\share\cmake-3.10\Modules\FindPackageMessage.cmake;F:\proj\dnn\ncnn\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\proj\dnn\ncnn\buildvs15\tools\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="F:\proj\dnn\ncnn\tools\ncnn2mem.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="F:\proj\dnn\ncnn\buildvs15\src\ncnn.vcxproj">
       <Project>{7E1E324D-EF5B-3591-896B-164062455D8E}</Project>
       <Name>ncnn</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tools\ncnn2mem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

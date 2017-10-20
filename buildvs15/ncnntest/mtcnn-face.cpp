@@ -55,13 +55,8 @@ private:
     ncnn::Net Pnet, Rnet, Onet;
     ncnn::Mat img;
 
-	int MIN_DET_SIZE = 12;
-	int minsize = 40;
-	int maxsize = 250;
-	float factor = 0.709;
-
-    const float nms_threshold[3] = {0.3f, 0.3f, 0.3f};
-    const float threshold[3] = {0.6f, 0.6f, 0.98f};
+    const float nms_threshold[3] = {0.5f, 0.7f, 0.7f};
+    const float threshold[3] = {0.6f, 0.6f, 0.6f};
     const float mean_vals[3] = {127.5f, 127.5f, 127.5f};
     const float norm_vals[3] = {0.0078125f, 0.0078125f, 0.0078125f};
     std::vector<Bbox> firstBbox_, secondBbox_,thirdBbox_;
@@ -70,12 +65,12 @@ private:
 };
 
 mtcnn::mtcnn(){
-    Pnet.load_param("./face-model/det1.param");
-    Pnet.load_model("./face-model/det1.bin");
-    Rnet.load_param("./face-model/det2.param");
-    Rnet.load_model("./face-model/det2.bin");
-    Onet.load_param("./face-model/det3.param");
-    Onet.load_model("./face-model/det3.bin");
+	Pnet.load_param("./face-model/det1.param");
+	Pnet.load_model("./face-model/det1.bin");
+	Rnet.load_param("./face-model/det2.param");
+	Rnet.load_model("./face-model/det2.bin");
+	Onet.load_param("./face-model/det3.param");
+	Onet.load_model("./face-model/det3.bin");
 }
 
 void mtcnn::generateBbox(ncnn::Mat score, ncnn::Mat location, std::vector<Bbox>& boundingBox_, std::vector<orderScore>& bboxScore_, float scale){
@@ -177,8 +172,8 @@ void mtcnn::refineAndSquareBbox(vector<Bbox> &vecBbox, const int &height, const 
             bbh = (*it).y2 - (*it).y1 + 1;
             x1 = (*it).x1 + (*it).regreCoord[0]*bbw;
             y1 = (*it).y1 + (*it).regreCoord[1]*bbh;
-            x2 = (*it).x1 + (*it).regreCoord[2]*bbw;
-            y2 = (*it).y1 + (*it).regreCoord[3]*bbh;
+            x2 = (*it).x2 + (*it).regreCoord[2]*bbw;
+            y2 = (*it).y2 + (*it).regreCoord[3]*bbh;
 
             w = x2 - x1 + 1;
             h = y2 - y1 + 1;
@@ -207,17 +202,19 @@ void mtcnn::detect(ncnn::Mat& img_, std::vector<Bbox>& finalBbox_){
     img_h = img.h;
     img.substract_mean_normalize(mean_vals, norm_vals);
 
-    float m = (float)MIN_DET_SIZE/minsize;
     float minl = img_w<img_h?img_w:img_h;
-	if (maxsize > minl)
-		maxsize = minl;
-	minl = maxsize;
+    int MIN_DET_SIZE = 12;
+    int minsize = 40;
+    float m = (float)MIN_DET_SIZE/minsize;
     minl *= m;
+    float factor = 0.709;
+    int factor_count = 0;
     vector<float> scales_;
     while(minl>MIN_DET_SIZE){
+        if(factor_count>0)m = m*factor;
         scales_.push_back(m);
-		m = m*factor;
         minl *= factor;
+        factor_count++;
     }
     orderScore order;
     int count = 0;
@@ -306,16 +303,16 @@ void mtcnn::detect(ncnn::Mat& img_, std::vector<Bbox>& finalBbox_){
             ncnn::Mat score, bbox, keyPoint;
             ex.extract("prob1", score);
             ex.extract("conv6-2", bbox);
-            //ex.extract("conv6-3", keyPoint);
+            ex.extract("conv6-3", keyPoint);
             if(score.channel(1)[0]>threshold[2]){
                 for(int channel=0;channel<4;channel++)
                     it->regreCoord[channel]=bbox.channel(channel)[0];
                 it->area = (it->x2 - it->x1)*(it->y2 - it->y1);
                 it->score = score.channel(1)[0];
-                //for(int num=0;num<5;num++){
-                //    (it->ppoint)[num] = it->x1 + (it->x2 - it->x1)*keyPoint.channel(num)[0];
-                //    (it->ppoint)[num+5] = it->y1 + (it->y2 - it->y1)*keyPoint.channel(num+5)[0];
-                //}
+                for(int num=0;num<5;num++){
+                    (it->ppoint)[num] = it->x1 + (it->x2 - it->x1)*keyPoint.channel(num)[0];
+                    (it->ppoint)[num+5] = it->y1 + (it->y2 - it->y1)*keyPoint.channel(num+5)[0];
+                }
 
                 thirdBbox_.push_back(*it);
                 order.score = it->score;
@@ -343,7 +340,7 @@ void mtcnn::detect(ncnn::Mat& img_, std::vector<Bbox>& finalBbox_){
 
 int main(int argc, char** argv)
 {
-	const char* imagepath = "hy.jpg";// argv[1];
+	const char* imagepath = "h1.jpg";// argv[1];
 
     cv::Mat cv_img = cv::imread(imagepath, CV_LOAD_IMAGE_COLOR);
     if (cv_img.empty())
@@ -353,55 +350,15 @@ int main(int argc, char** argv)
     }
     std::vector<Bbox> finalBbox;
     mtcnn mm;
-    ncnn::Mat ncnn_img = ncnn::Mat::from_pixels(cv_img.data, ncnn::Mat::PIXEL_BGR, cv_img.cols, cv_img.rows);
+    ncnn::Mat ncnn_img = ncnn::Mat::from_pixels(cv_img.data, ncnn::Mat::PIXEL_BGR2RGB, cv_img.cols, cv_img.rows);
     mm.detect(ncnn_img, finalBbox);
     for(vector<Bbox>::iterator it=finalBbox.begin(); it!=finalBbox.end();it++){
         if((*it).exist){
-            rectangle(cv_img, Point((*it).x1, (*it).y1), Point((*it).x2, (*it).y2), Scalar(0,0,255), 2,8,0);
-            //for(int num=0;num<5;num++)circle(cv_img,Point((int)*(it->ppoint+num), (int)*(it->ppoint+num+5)),3,Scalar(0,255,255), -1);
+            cv::rectangle(cv_img, Point((*it).x1, (*it).y1), Point((*it).x2, (*it).y2), Scalar(0,0,255), 2,8,0);
+            for(int num=0;num<5;num++)cv::circle(cv_img,Point((int)*(it->ppoint+num), (int)*(it->ppoint+num+5)),3,Scalar(0,255,255), -1);
         }
     }
-    imshow("result.jpg",cv_img);
-	waitKey();
+    imshow("result",cv_img);
+	cv::waitKey();
     return 0;
-}
-
-
-int main11(int argc, char** argv)
-{
-	std::string imageDir("F:\\data\\pd\\pd-pos");
-	std::string imageListFile("pictureNameList.txt");
-
-	ifstream flist(imageDir + "\\" + imageListFile);
-	std::string imageName;
-	vector<std::string> vfile;
-	while (flist >> imageName)
-	{
-		vfile.push_back(imageDir + "\\" + imageName);
-	}
-	mtcnn mm;
-
-	for (size_t i = 0; i < vfile.size(); i++)
-	{
-		cv::Mat cv_img_ = cv::imread(vfile[i], CV_LOAD_IMAGE_COLOR);
-		if (cv_img_.empty())
-		{
-			fprintf(stderr, "cv::imread %s failed\n", vfile[i]);
-			continue;
-		}
-		cv::Mat img;
-		cv::resize(cv_img_, img, cv::Size(cv_img_.cols, cv_img_.rows * 0.4f));
-		std::vector<Bbox> finalBbox;
-		ncnn::Mat ncnn_img = ncnn::Mat::from_pixels(img.data, ncnn::Mat::PIXEL_BGR, img.cols, img.rows);
-		mm.detect(ncnn_img, finalBbox);
-		for (vector<Bbox>::iterator it = finalBbox.begin(); it != finalBbox.end(); it++) {
-			if ((*it).exist) {
-				rectangle(img, Point((*it).x1, (*it).y1), Point((*it).x2, (*it).y2), Scalar(0, 0, 255), 2, 8, 0);
-				//for(int num=0;num<5;num++)circle(cv_img,Point((int)*(it->ppoint+num), (int)*(it->ppoint+num+5)),3,Scalar(0,255,255), -1);
-			}
-		}
-		imshow("result", img);
-		waitKey(1);
-	}
-	return 0;
 }
