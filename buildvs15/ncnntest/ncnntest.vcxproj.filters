@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mtcnn-face.cpp">
+    <ClCompile Include="mtcnn.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

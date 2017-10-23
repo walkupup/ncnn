@@ -56,12 +56,12 @@ private:
     ncnn::Mat img;
 
 	int MIN_DET_SIZE = 12;
-	int minsize = 40;
+	int minsize = 100;
 	int maxsize = 250;
 	float factor = 0.709;
 
     const float nms_threshold[3] = {0.3f, 0.3f, 0.3f};
-    const float threshold[3] = {0.6f, 0.6f, 0.98f};
+    const float threshold[3] = {0.6f, 0.6f, 0.8f};
     const float mean_vals[3] = {127.5f, 127.5f, 127.5f};
     const float norm_vals[3] = {0.0078125f, 0.0078125f, 0.0078125f};
     std::vector<Bbox> firstBbox_, secondBbox_,thirdBbox_;
@@ -70,12 +70,12 @@ private:
 };
 
 mtcnn::mtcnn(){
-    Pnet.load_param("./face-model/det1.param");
-    Pnet.load_model("./face-model/det1.bin");
-    Rnet.load_param("./face-model/det2.param");
-    Rnet.load_model("./face-model/det2.bin");
-    Onet.load_param("./face-model/det3.param");
-    Onet.load_model("./face-model/det3.bin");
+    Pnet.load_param("./pd-model/det1.param");
+    Pnet.load_model("./pd-model/det1.bin");
+    Rnet.load_param("./pd-model/det2.param");
+    Rnet.load_model("./pd-model/det2.bin");
+    Onet.load_param("./pd-model/det3.param");
+    Onet.load_model("./pd-model/det3.bin");
 }
 
 void mtcnn::generateBbox(ncnn::Mat score, ncnn::Mat location, std::vector<Bbox>& boundingBox_, std::vector<orderScore>& bboxScore_, float scale){
@@ -341,9 +341,9 @@ void mtcnn::detect(ncnn::Mat& img_, std::vector<Bbox>& finalBbox_){
     thirdBboxScore_.clear();
 }
 
-int main(int argc, char** argv)
+int main11(int argc, char** argv)
 {
-	const char* imagepath = "hy.jpg";// argv[1];
+	const char* imagepath = "p2.jpg";// argv[1];
 
     cv::Mat cv_img = cv::imread(imagepath, CV_LOAD_IMAGE_COLOR);
     if (cv_img.empty())
@@ -367,7 +367,7 @@ int main(int argc, char** argv)
 }
 
 
-int main11(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	std::string imageDir("F:\\data\\pd\\pd-pos");
 	std::string imageListFile("pictureNameList.txt");
@@ -390,7 +390,7 @@ int main11(int argc, char** argv)
 			continue;
 		}
 		cv::Mat img;
-		cv::resize(cv_img_, img, cv::Size(cv_img_.cols, cv_img_.rows * 0.4f));
+		cv::resize(cv_img_, img, cv::Size(cv_img_.cols, cv_img_.rows * 0.36f));
 		std::vector<Bbox> finalBbox;
 		ncnn::Mat ncnn_img = ncnn::Mat::from_pixels(img.data, ncnn::Mat::PIXEL_BGR, img.cols, img.rows);
 		mm.detect(ncnn_img, finalBbox);
